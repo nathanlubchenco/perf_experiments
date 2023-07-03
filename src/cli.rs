@@ -5,8 +5,7 @@ use std::fmt;
 #[derive(Debug)]
 pub enum NnImpls {
     Heap,
-    Parallel,
-    Sort,
+    ParallelSort,
     KDTree,
     LocalitySensitiveHashing,
     HierarchicalSmallWord
@@ -19,6 +18,7 @@ impl FromStr for NnImpls {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
             "Heap" | "heap" | "h" => Ok(NnImpls::Heap),
+            "parallel" | "sort" | "parallelSort" | "ps" => Ok(NnImpls::Heap),
             // Add other matches for other variants
             _ => Err("no match"),
         }
@@ -29,6 +29,7 @@ impl fmt::Display for NnImpls {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
             NnImpls::Heap => write!(f, "Heap"),
+            NnImpls::ParallelSort => write!(f, "ParallelSort"),
             _ => write!(f, "not yet supported approach")
             // Add other matches for other variants
         }

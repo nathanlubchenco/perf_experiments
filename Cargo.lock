@@ -405,6 +405,7 @@ dependencies = [
  "criterion",
  "ordered-float",
  "rand",
+ "rayon",
  "serde_json",
  "structopt",
 ]

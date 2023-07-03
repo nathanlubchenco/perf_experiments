@@ -27,5 +27,8 @@ For example, I was interested in learning about clis, io, enums and benchmarking
 
 # Capabilities
 
-Currently only supports a naive heap based approach of finding the top k nearest neighbors.
+Currently only supports
+* a naive heap based approach of finding the top k nearest neighbors.
+* a naive parallel sort approach
+
 TODO -- provide support for additional NN impls.
