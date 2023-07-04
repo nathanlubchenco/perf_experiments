@@ -1,40 +1,5 @@
 use structopt::StructOpt;
-use std::str::FromStr;
-use std::fmt;
-
-#[derive(Debug)]
-pub enum NnImpls {
-    Heap,
-    ParallelSort,
-    KDTree,
-    LocalitySensitiveHashing,
-    HierarchicalSmallWord
-}
-
-//TODO revisit this to understand better, plus add other types
-impl FromStr for NnImpls {
-    type Err = &'static str; // Change this to be the type of error you want to return
-
-    fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s {
-            "Heap" | "heap" | "h" => Ok(NnImpls::Heap),
-            "parallel" | "sort" | "parallelSort" | "ps" => Ok(NnImpls::Heap),
-            // Add other matches for other variants
-            _ => Err("no match"),
-        }
-    }
-}
-
-impl fmt::Display for NnImpls {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
-        match self {
-            NnImpls::Heap => write!(f, "Heap"),
-            NnImpls::ParallelSort => write!(f, "ParallelSort"),
-            _ => write!(f, "not yet supported approach")
-            // Add other matches for other variants
-        }
-    }
-}
+use crate::data::NnImpls;
 
 #[derive(Debug, StructOpt)]
 pub enum Command {

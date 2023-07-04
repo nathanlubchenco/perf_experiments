@@ -27,7 +27,7 @@ pub fn generate_vectors(count: &usize, size: &usize, min: &f32, max: &f32) -> Ve
 
 pub fn write_vectors(filename: &String, vectors: &Vec<Vec<f32>>) -> std::io::Result<()> {
     let file = File::create(filename)?;
-    let data = serde_json::to_string(&vectors).unwrap();
+    let data = serde_json::to_string(&vectors).unwrap(); // consider using something more compact than json
     let mut writer = std::io::BufWriter::new(file);
     writer.write_all(data.as_bytes())?;
 

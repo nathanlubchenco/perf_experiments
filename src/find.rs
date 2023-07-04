@@ -1,13 +1,11 @@
-use crate::cli::NnImpls;
+use crate::data::NnImpls;
 use std::collections::BinaryHeap;
 use std::cmp::Reverse;
 use ordered_float::OrderedFloat;
 use rayon::prelude::*;
 use std::cell::RefCell;
-use std::thread;
 
 thread_local!(static HAS_PRINTED: RefCell<bool> = RefCell::new(false));
-
 
 fn distance(a: &[f32], b: &[f32]) -> f32 {
     a.iter()

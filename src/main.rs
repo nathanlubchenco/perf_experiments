@@ -1,6 +1,7 @@
 use structopt::StructOpt;
 
 mod cli;
+mod data;
 mod generate;
 mod find;
 mod load;
