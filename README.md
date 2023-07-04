@@ -59,12 +59,15 @@ heap 10000              time:   [40.967 ms 41.018 ms 41.105 ms]
 parallel sort 10        time:   [84.301 ms 84.334 ms 84.369 ms]
                         change: [-0.6117% +0.0366% +0.5737%] (p = 0.91 > 0.05)
                         No change in performance detected.
+
 parallel sort 100       time:   [84.476 ms 84.536 ms 84.629 ms]
                         change: [+0.5517% +0.8552% +1.1188%] (p = 0.00 < 0.05)
                         Change within noise threshold.
+
 parallel sort 1000      time:   [84.644 ms 84.673 ms 84.703 ms]
                         change: [+0.9079% +1.1531% +1.2953%] (p = 0.00 < 0.05)
                         Change within noise threshold.
+
 parallel sort 10000     time:   [86.772 ms 86.841 ms 86.921 ms]
                         change: [-0.3027% +0.3544% +0.8019%] (p = 0.25 > 0.05)
                         No change in performance detected.
